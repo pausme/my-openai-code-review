@@ -27,5 +27,5 @@ jobs:
       - name: Run Java code
         run: |
           cd my-openai-code-review-sdk/src/main/java
-          javac com/huang/middleware/sdk/OpenAiCodeReview
+          javac com/huang/middleware/sdk/OpenAiCodeReview.java
           java com.huang.middleware.sdk.OpenAiCodeReview
