@@ -19,7 +19,7 @@ public class ApiTest {
 
     @Test
     public void test() {
-        System.out.println("aaaaa1234");
+        System.out.println("hello friend!!!");
     }
 
 }
