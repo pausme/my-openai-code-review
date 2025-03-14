@@ -6,11 +6,6 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static com.huang.middleware.test.SievePrimeGenerator.sieveOfEratosthenes;
-
 /**
  * @Description: 测试类
  * @Version: 1.0
@@ -24,34 +19,20 @@ public class ApiTest {
 
     @Test
     public void test() {
-        System.out.println(sieveOfEratosthenes(100));  // 输出 [2, 3, 5, ..., 97]
+        System.out.println(isPrime(2147483647));  // 输出 true
     }
 
-}
+    public static boolean isPrime(int n) {
+        if (n <= 1) return false;
+        if (n <= 3) return true;
+        if (n % 2 == 0 || n % 3 == 0) return false;
 
-class SievePrimeGenerator {
-    public static List<Integer> sieveOfEratosthenes(int n) {
-        List<Integer> primes = new ArrayList<>();
-        if (n < 2) return primes;
-
-        boolean[] isPrime = new boolean[n + 1];
-        for (int i = 2; i <= n; i++) {
-            isPrime[i] = true;
-        }
-
-        for (int i = 2; i * i <= n; i++) {
-            if (isPrime[i]) {
-                for (int j = i * i; j <= n; j += i) {
-                    isPrime[j] = false;
-                }
+        // 检查 6k ± 1 形式的因数
+        for (int i = 5; i * i <= n; i += 6) {
+            if (n % i == 0 || n % (i + 2) == 0) {
+                return false;
             }
         }
-
-        for (int i = 2; i <= n; i++) {
-            if (isPrime[i]) {
-                primes.add(i);
-            }
-        }
-        return primes;
+        return true;
     }
 }
