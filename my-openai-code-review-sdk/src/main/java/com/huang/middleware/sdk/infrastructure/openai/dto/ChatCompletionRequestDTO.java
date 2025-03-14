@@ -1,10 +1,12 @@
-package com.huang.middleware.sdk.domain.model;
+package com.huang.middleware.sdk.infrastructure.openai.dto;
+
+import com.huang.middleware.sdk.domain.model.ChatGLM_Model;
 
 import java.util.List;
 
-public class ChatCompletionRequest {
+public class ChatCompletionRequestDTO {
 
-    private String model = Model.GLM_4_FLASH.getCode();
+    private String model = ChatGLM_Model.GLM_4_FLASH.getCode();
     private List<Prompt> messages;
 
     public static class Prompt {

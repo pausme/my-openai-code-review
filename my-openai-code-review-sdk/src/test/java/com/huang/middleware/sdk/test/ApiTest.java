@@ -1,7 +1,7 @@
 package com.huang.middleware.sdk.test;
 
 import com.alibaba.fastjson2.JSON;
-import com.huang.middleware.sdk.domain.model.ChatCompletionSyncResponse;
+import com.huang.middleware.sdk.infrastructure.openai.dto.ChatCompletionSyncResponseDTO;
 import com.huang.middleware.sdk.types.utils.BearerTokenUtils;
 import com.huang.middleware.sdk.types.utils.WXAccessTokenUtils;
 import org.junit.Test;
@@ -76,7 +76,7 @@ public class ApiTest {
         in.close();
         connection.disconnect();
 
-        ChatCompletionSyncResponse response = JSON.parseObject(content.toString(), ChatCompletionSyncResponse.class);
+        ChatCompletionSyncResponseDTO response = JSON.parseObject(content.toString(), ChatCompletionSyncResponseDTO.class);
         System.out.println(response.getChoices().get(0).getMessage().getContent());
 
     }

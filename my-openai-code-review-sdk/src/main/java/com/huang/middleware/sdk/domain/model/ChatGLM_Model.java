@@ -1,6 +1,6 @@
 package com.huang.middleware.sdk.domain.model;
 
-public enum Model {
+public enum ChatGLM_Model {
 
     @Deprecated
     CHATGLM_6B_SSE("chatGLM_6b_SSE", "ChatGLM-6B 测试模型"),
@@ -24,7 +24,7 @@ public enum Model {
     private final String code;
     private final String info;
 
-    Model(String code, String info) {
+    ChatGLM_Model(String code, String info) {
         this.code = code;
         this.info = info;
     }
