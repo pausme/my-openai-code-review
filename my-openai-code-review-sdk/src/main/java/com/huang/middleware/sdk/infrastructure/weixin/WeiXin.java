@@ -1,5 +1,6 @@
 package com.huang.middleware.sdk.infrastructure.weixin;
 
+import com.alibaba.fastjson2.JSON;
 import com.huang.middleware.sdk.infrastructure.weixin.dto.TemplateMessageDTO;
 import com.huang.middleware.sdk.types.utils.WXAccessTokenUtils;
 import org.slf4j.Logger;

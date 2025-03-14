@@ -3,28 +3,11 @@ package com.huang.middleware.sdk;
 import com.huang.middleware.sdk.domain.service.impl.ChatGLMCodeReviewService;
 import com.huang.middleware.sdk.infrastructure.git.GitCommand;
 import com.huang.middleware.sdk.infrastructure.openai.IOpenAI;
-import com.huang.middleware.sdk.infrastructure.openai.dto.ChatCompletionRequestDTO;
-import com.huang.middleware.sdk.infrastructure.openai.dto.ChatCompletionSyncResponseDTO;
-import com.alibaba.fastjson2.JSON;
-import com.huang.middleware.sdk.domain.model.ChatGLM_Model;
 import com.huang.middleware.sdk.infrastructure.openai.impl.ChatGLM;
 import com.huang.middleware.sdk.infrastructure.weixin.WeiXin;
-import com.huang.middleware.sdk.types.utils.BearerTokenUtils;
-import com.huang.middleware.sdk.types.utils.WXAccessTokenUtils;
-import org.eclipse.jgit.api.Git;
-import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Random;
-import java.util.Scanner;
 
 /**
  * @Description: openai代码评审执行类

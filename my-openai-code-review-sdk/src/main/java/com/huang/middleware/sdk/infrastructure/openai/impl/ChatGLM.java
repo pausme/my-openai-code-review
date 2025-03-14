@@ -1,5 +1,6 @@
 package com.huang.middleware.sdk.infrastructure.openai.impl;
 
+import com.alibaba.fastjson2.JSON;
 import com.huang.middleware.sdk.infrastructure.openai.IOpenAI;
 import com.huang.middleware.sdk.infrastructure.openai.dto.ChatCompletionRequestDTO;
 import com.huang.middleware.sdk.infrastructure.openai.dto.ChatCompletionSyncResponseDTO;
